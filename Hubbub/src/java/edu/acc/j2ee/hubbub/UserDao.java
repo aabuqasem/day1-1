@@ -1,5 +1,6 @@
 package edu.acc.j2ee.hubbub;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,7 +29,7 @@ public class UserDao {
         for (User u : users)
             if (u.getUsername().equals(username))
                 return null;
-        User newUser = new User(username, password1);
+        User newUser = new User(username, password1, LocalDate.now());
         users.add(newUser);
         return newUser;
     }

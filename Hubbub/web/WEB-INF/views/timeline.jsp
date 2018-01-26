@@ -30,7 +30,7 @@
             <c:forEach var="post" items="${posts}">
                 <li>
                     Posted by
-                    <span class="author">
+                    <span class="author" title="${post.author.joined}">
                         <c:choose>
                             <c:when test="${not empty user}">
                                 <a href="main?action=profile&for=${post.author.username}">
